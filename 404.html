@@ -5,23 +5,21 @@
     <meta charset="utf-8">
     <link href="favicon.ico" rel="shortcut icon">
     <meta name="generator" content="GitLab Pages">
-    <title>MR. Lab - 404</title>
+    <title>MoonTech - css Challenge</title>
     <style>
-        /* *,
-        :before,
-        :after {
-            box-sizing: border-box;
-        } */
+        :root {
+            --color: black
+        }
 
         body {
             display: flex;
             align-items: center;
-            background: #193d57;
+            background: linear-gradient(150deg, #d3e6f9 0%, #d3e6f9 50%, #a0c3f1 50%, #a0c3f1 100%);
             min-width: 275px;
             height: 100vh;
             margin: 0 10vw;
             overflow: hidden;
-            color: #ecf7ff;
+            color: var(--color);
             font-family: fantasy;
         }
 
@@ -34,14 +32,8 @@
 
         h1 {
             margin: 0;
-            font-size: 6em;
+            font-size: 4em;
             font-weight: 100;
-        }
-
-        p {
-            width: 95%;
-            font-size: 1.5em;
-            line-height: 1.4;
         }
 
         .buttons {
@@ -55,8 +47,8 @@
             padding: 0.8em 1em;
             margin-right: 1em;
             margin-bottom: 1em;
-            border: 3px solid #ecf7ff;
-            color: #ecf7ff;
+            border: 3px solid var(--color);
+            color: var(--color);
             font-weight: 500;
             text-transform: uppercase;
             text-decoration: none;
@@ -67,7 +59,7 @@
         }
 
         a:hover {
-            color: #11476e;
+            color: white;
         }
 
         a:hover:before {
@@ -76,7 +68,7 @@
 
         a:before {
             content: '';
-            background: #c7dae9;
+            background: var(--color);
             height: 100%;
             width: 100%;
             position: absolute;
@@ -86,79 +78,17 @@
             z-index: -1;
         }
 
-        .space {
-            width: 75px;
-            height: calc(50vh + 37.5px);
-            border-top-left-radius: 37.5px;
-            border-top-right-radius: 37.5px;
-            overflow: hidden;
-            margin: calc(50vh - 37.5px) auto 0 auto;
-            position: relative;
-            pointer-events: none;
-            --webkit-transform: translateZ(0);
-        }
-
-        /* .blackhole {
-            border: 5px solid #1674d1;
-            height: 75px;
-            width: 75px;
-            border-radius: 50%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        } */
-
-        /* .blackhole:after {
-            content: '';
-            height: calc(100% + 10px);
-            width: calc(100% + 10px);
-            border: 5px solid #1674d1;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
-            border-radius: 50%;
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            z-index: 5;
-            transform: rotate(45deg);
-        } */
-
-        /* .ship {
-            height: 150px;
-            width: 55px;
-            margin-left: 10px;
-            background: url('../MR.png') center/contain no-repeat;
-            animation: blackhole 4s infinite linear;
-            position: absolute;
-            bottom: -150px;
-        } */
-
-        /* @keyframes blackhole {
-            to {
-                transform: translateY(-100vh);
-            }
-        } */
-
         @media (max-width: 600px) {
             body {
                 margin: 0 5vw;
             }
         }
-
-        .starry-sky {
-            display: block;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-        }
-
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <h1>Hmmm....</h1>
-        <p>Page not found.</p>
+        <h1>Page not found.</h1>
         <div class="buttons">
             <a onclick="history.back()">Back</a>
             <a href="index.html">Home</a>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>bar loading</title>
+    <style>
+        #loadingFrame {
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #3F3E3D;
+            color: #fff;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 {
+            font-family: 'Open Sans', -apple-system, 'Segoe UI', sans-serif;
+            font-size: 50px;
+            font-weight: bold;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        .dots {
+            display: inline-flex;
+        }
+
+        .dots .dot.x {
+            animation: scale 0.8s 0.2s infinite forwards;
+        }
+
+        .dots .dot.y,
+        .dots .dot.z {
+            animation: right 0.5s infinite forwards;
+        }
+
+        .dots .dot.l {
+            animation: rightDown 0.4s 0.1s infinite forwards linear, drop 2s 0.4s infinite forwards linear;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 10px;
+            position: relative;
+            margin-left: 6px;
+        }
+
+        .dot.x {
+            position: absolute;
+            transform: scale(0);
+        }
+
+        @keyframes scale {
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .dot.y,
+        .dot.z {
+            transform: translateX(0px);
+        }
+
+        @keyframes right {
+            100% {
+                transform: translateX(16px);
+            }
+        }
+
+        .dot.t {
+            background: transparent;
+        }
+
+        .dot .l {
+            margin-left: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @keyframes rightDown {
+            50% {
+                top: 4px;
+                left: 16px;
+            }
+
+            100% {
+                top: 12px;
+                left: 24px;
+            }
+        }
+
+        @keyframes drop {
+            100% {
+                transform: translate(70px, calc(35px + (100vh/2)));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loadingFrame">
+        <h2>Loading</h2>
+        <div class="dots">
+            <span class="dot x"></span>
+            <span class="dot y"></span>
+            <span class="dot z"></span>
+            <span class="dot t">
+                <span class="dot l"></span>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

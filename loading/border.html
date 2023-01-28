@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>border loading</title>
+    <style>
+        :root {
+            --bg: #1c1717;
+        }
+
+        @property --angle {
+            initial-value: 0deg;
+            inherits: false;
+            syntax: '<angle>';
+        }
+
+        @property --h {
+            initial-value: 0;
+            inherits: false;
+            syntax: '<number>';
+        }
+
+        #loadingFrame {
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #3F3E3D;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading {
+            padding: 2rem 4rem;
+            font-family: monospace;
+            font-weight: bold;
+            color: #fff;
+            border-style: solid;
+            border-width: 1vmin;
+            font-size: 2rem;
+            --charge: hsl(var(--h, 0), 80%, 50%);
+            border-image: conic-gradient(var(--charge) var(--angle), transparent calc(var(--angle) + 0.5deg)) 30;
+            animation: loader 2s infinite ease-in-out;
+        }
+
+
+        @keyframes loader {
+
+            0%,
+            10% {
+                --angle: 0deg;
+                --h: 0;
+            }
+
+            100% {
+                --angle: 360deg;
+                --h: 100;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loadingFrame">
+        <div class="loading">Loading</div>
+    </div>
+</body>
+
+</html>
