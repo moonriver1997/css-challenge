@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>change color</title>
+    <style>
+        #frame {
+            font-family: "Montserrat", sans-serif;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #3F3E3D;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1::before,
+        h1::after {
+            content: attr(data-text);
+            color: #efd9c3;
+            font-size: 120px;
+        }
+
+        h1::before {
+            position: absolute;
+            text-shadow:
+                1px 1px,
+                2px 2px,
+                3px 3px,
+                4px 4px,
+                5px 5px,
+                6px 6px,
+                7px 7px,
+                8px 8px,
+                9px 9px,
+                10px 10px;
+            -webkit-mask: repeating-linear-gradient(45deg, transparent 0 3px, rgba(0, 0, 0, 0.5) 0 6px);
+            mask: repeating-linear-gradient(45deg, transparent 0 3px, rgba(0, 0, 0, 0.5) 0 6px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="frame">
+        <h1 data-text="Hello!!!"></h1>
+    </div>
+</body>
+
+</html>

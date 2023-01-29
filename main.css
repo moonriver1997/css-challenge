@@ -202,6 +202,7 @@ input:checked {
     animation: check 0.4s linear forwards;
 }
 
+#text:checked~.text,
 #intro:checked~.intro,
 #daily:checked~.daily,
 #loading:checked~.loading {
